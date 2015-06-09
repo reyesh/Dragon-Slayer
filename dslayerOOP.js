@@ -21,7 +21,8 @@ aCharacter.methods = {
 		return Math.floor(Math.random()*2);
 	},
   printStatus: function(){
-		$("#gameStatus").append("<p>" + this.type + " hp:" + this.hp + "</p>");
+		//$("#gameStatus").append("<p>" + this.type + " hp:" + this.hp + "</p>");
+		printMsg(this.type + "hp: " + this.hp);
 		scrollDown();
 		//return status of character
 		if(this.hp<=0){ gameOver(); }
@@ -34,8 +35,8 @@ function scrollDown(){
 	box.scrollTop = box.scrollHeight;
 }
 
-function printMsg(msg){
-	$("#gameStatus").append("<p>" + msg + "</p>");
+function printMsg(msg, actionRow){
+	$("#gameStatus").append("<p class=" + '"gameStatusMsg ' + actionRow + '">' + msg + "</p>");
 	scrollDown();
 }
 
@@ -56,12 +57,12 @@ var run;
 var input;
 
 $( "#run" ).click(function() {
-	printMsg("you want to run ");
+	printMsg("you want to run", "actionRow");
 	fight(false)
 });
 
 $( "#hit" ).click(function() {
-	printMsg("you want to hit ");
+	printMsg("you want to hit", "actionRow");
 	fight(true);
 });
 
