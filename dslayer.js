@@ -1,3 +1,8 @@
+var dragonHP1 = aCharacter("dragon");
+var playerHP1 = aCharacter("player");
+dragonHP1.printStatus();
+playerHP1.printStatus();
+
 var slaying = true;
 var youHit = 0;
 var totalDamage = 0 ;

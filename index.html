@@ -2,8 +2,26 @@
 
 <html>
 <head>
-  <script src="dslayer.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <style>
+    #gameStatus {
+      border: 1px solid #ccc;
+      float:left;
+      overflow-y: auto;
+      height: 200px;
+      width: 500px;
+    }
+  </style>
+  <script>
+  </script>
 </head>
 <body>
+  <div id="gameStatus"></div>
+  <div id="playingInput">
+    <button id="run">Run</button>
+    <button id="hit">Hit</button>
+  </div>
+  <script src="dslayerOOP.js"></script>
 </body>
 </html>
